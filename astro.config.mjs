@@ -4,6 +4,9 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://santiagovedia.com',
-  adapter: cloudflare(),
+  output: 'static',
+  adapter: cloudflare({
+    imageService: 'passthrough'
+  }),
   integrations: [sitemap()]
 });
