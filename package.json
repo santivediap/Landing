@@ -15,10 +15,12 @@
   "dependencies": {
     "@astrojs/cloudflare": "^13.5.4",
     "@astrojs/sitemap": "^3.7.2",
-    "astro": "^6.3.7",
-    "wrangler": "^4.94.0"
+    "astro": "^6.3.7"
   },
   "overrides": {
     "vite": "^7"
+  },
+  "devDependencies": {
+    "wrangler": "^4.94.0"
   }
 }
