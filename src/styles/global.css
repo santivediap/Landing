@@ -335,3 +335,182 @@ circle {
     color: #ef4444;
     border: 1px solid rgba(239, 68, 68, 0.2);
 }
+
+@media (max-width: 419px) {
+    header {
+        padding: 7vw 5vw;
+    }
+
+    nav {
+        gap: 3.5vw;
+
+        a {
+            font-size: 3.5vw;
+        }
+    }
+
+    main {
+        padding: 10vw 5vw;
+        gap: 19vw;
+    }
+
+    #hero {
+        gap: 9.5vw;
+
+        img {
+            width: 60vw;
+        }
+
+        .top {
+            gap: 8vw;
+
+            h1 {
+                font-size: 7.5vw;
+            }
+
+            p {
+                font-size: 4.2vw;
+            }
+        }
+
+        .btm {
+            gap: 4.8vw;
+        }
+    }
+
+    .btn {
+        padding: 3.5vw 7vw;
+        border-radius: 2.4vw;
+        font-size: 3.4vw;
+    }
+
+    #socials {
+        gap: 3.5vw;
+
+        li {
+            width: 6vw;
+        }
+    }
+
+    .section {
+        h2 {
+            font-size: 6vw;
+            margin-bottom: 7vw;
+        }
+    }
+
+    .about-content {
+        gap: 4.8vw;
+
+        p {
+            font-size: 3.8vw;
+        }
+    }
+
+    #projects {
+        gap: 6vw;
+
+        article {
+            border-radius: 3.6vw;
+
+            .display {
+                height: 36vw;
+            }
+
+            .info {
+                gap: 4.8vw;
+                padding: 3.6vw;
+
+                h3 {
+                    font-size: 5vw;
+                }
+
+                p {
+                    font-size: 3.4vw;
+                }
+
+                .buttons {
+                    gap: 3.5vw;
+
+                    a {
+                        width: 19vw;
+                        padding: 1.7vw 2.4vw;
+                        border-radius: 12vw;
+
+                        span {
+                            font-size: 3vw;
+                        }
+
+                        svg {
+                            width: 3.6vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .white-svg {
+        padding: 1vw;
+    }
+
+    #tech-stack {
+        gap: 4.8vw;
+
+        h3 {
+            font-size: 4.5vw;
+            margin-bottom: 4.8vw;
+        }
+
+        ul {
+            gap: 2.4vw;
+
+            li {
+                gap: 2.4vw;
+                border-radius: 3.6vw;
+                padding: 1.2vw 2.4vw;
+                font-size: 3.5vw;
+
+                img {
+                    width: 8.3vw;
+                }
+            }
+        }
+    }
+
+    #contact {
+        padding: 4.8vw;
+        border-radius: 3.6vw;
+        max-width: 95vw;
+    }
+
+    .contact-subtitle {
+        margin-bottom: 7vw;
+        font-size: 3.8vw;
+    }
+
+    .contact-form {
+        gap: 4.8vw;
+    }
+
+    .form-group {
+        gap: 1.9vw;
+    }
+
+    .form-group label {
+        font-size: 3.4vw;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        border-radius: 1.9vw;
+        padding: 2.9vw 3.8vw;
+        font-size: 3.8vw;
+    }
+
+    .form-status {
+        padding: 2.9vw;
+        border-radius: 1.9vw;
+        font-size: 3.4vw;
+    }
+}
