@@ -1,0 +1,47 @@
+---
+const { image_display, title, description, deploy_link, code_link } =
+    Astro.props;
+
+import Codewars from "./Codewars.astro";
+import Open from "./Open.astro";
+import { Image } from "astro:assets";
+---
+
+<article>
+    <div class="display">
+        <Image
+            src={image_display}
+            alt="Captura de la interfaz del proyecto Datotesis"
+            format="webp"
+            loading="lazy"
+            class="rounded-xl shadow-lg"
+        />
+    </div>
+
+    <div class="info">
+        <h3>{title}</h3>
+        <p>
+            {description}
+        </p>
+
+        <div class="buttons">
+            {
+                deploy_link && (
+                    <a class="purple" href={deploy_link}>
+                        <Open />
+                        <span>Open</span>
+                    </a>
+                )
+            }
+
+            {
+                code_link && (
+                    <a class="glass" href={code_link}>
+                        <Codewars />
+                        <span>Code</span>
+                    </a>
+                )
+            }
+        </div>
+    </div>
+</article>

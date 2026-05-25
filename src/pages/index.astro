@@ -1,5 +1,18 @@
 ---
-
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { Image } from "astro:assets";
+import fotoPerfil from "../assets/avatar.jpg";
+import fotoDatotesis from "../assets/datotesis.png";
+import fotoFSKs from "../assets/fullstack-kubernetes.png";
+import "../styles/global.css";
+import GitHub from "../components/GitHub.astro";
+import Twitter from "../components/Twitter.astro";
+import LinkedIn from "../components/LinkedIn.astro";
+import Codewars from "../components/Codewars.astro";
+import Social from "../components/Social.astro";
+import ProjectDisplay from "../components/ProjectDisplay.astro";
+import StackSection from "../components/StackSection.astro";
 ---
 
 <html lang="en">
@@ -9,9 +22,388 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Santiago Vedia | Software Engineer & Web Developer</title>
+		<meta
+			name="description"
+			content="Portfolio de Santiago Vedia. Especialista en desarrollo Fullstack, rendimiento web (Astro/React) y SEO técnico."
+		/>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Header />
+
+		<main>
+			<section id="hero">
+				<Image
+					src={fotoPerfil}
+					height={150}
+					width={150}
+					alt="Retrato de Santiago Vedia García"
+					format="webp"
+					loading="eager"
+					fetchpriority="high"
+					class="rounded-full shadow-lg"
+				/>
+
+				<div class="top">
+					<h1>
+						👋 Hey! I'm Santiago Vedia García. Welcome to my comfort
+						zone
+					</h1>
+
+					<p>
+						Fullstack Developer | DevOps Engineer | SEO Specialist
+					</p>
+
+					<ul id="socials">
+						<li>
+							<Social link="https://github.com/santivediap">
+								<GitHub />
+							</Social>
+						</li>
+
+						<li>
+							<Social link="https://x.com/SantiLMAO">
+								<Twitter />
+							</Social>
+						</li>
+
+						<li>
+							<Social
+								link="https://www.codewars.com/users/santivediap"
+							>
+								<Codewars />
+							</Social>
+						</li>
+
+						<li>
+							<Social
+								link="https://www.linkedin.com/in/santivediag/"
+							>
+								<LinkedIn />
+							</Social>
+						</li>
+					</ul>
+				</div>
+
+				<div class="btm">
+					<a class="btn purple" href="#projects">View Projects</a>
+					<a class="btn glass" href="#contact">Get in Touch</a>
+				</div>
+			</section>
+
+			<section class="section" id="about">
+				<h2>About</h2>
+
+				<div class="about-content">
+					<p>
+						I am a software engineer in the making, combining the
+						rigorous academic foundation of a Computer Engineering
+						degree with the fast-paced, hands-on execution of a Web
+						Development Bootcamp. My approach goes far beyond making
+						a design look good; I build architectures engineered
+						from the very first millisecond to dominate Core Web
+						Vitals, technical SEO, and user experience.
+					</p>
+
+					<p>
+						With one year left to complete my degree, I already
+						possess a deep understanding of computer architecture,
+						algorithms, and data structures. I apply these core
+						engineering principles to the modern JavaScript
+						ecosystem (React, Node.js, and performance-first
+						frameworks like Astro), involving myself in the entire
+						product lifecycle—from database conception to Edge
+						deployments.
+					</p>
+				</div>
+			</section>
+
+			<section class="section" id="projects">
+				<h2>Recent Projects</h2>
+
+				<ProjectDisplay
+					image_display={fotoDatotesis}
+					title="Datotesis"
+					description="Tool that gives you data insights in seconds with raw data and a
+            click. Useful for start-ups, students and teachers"
+					,
+					deploy_link="https://datotesis-final.onrender.com/"
+					,
+					code_link="https://github.com/santivediap/Datotesis"
+				/>
+
+				<ProjectDisplay
+					image_display={fotoFSKs}
+					title="Fullstack App on Kubernetes"
+					description="Learn the basics of how to deploy a simple Fullstack App in Kubernetes through this guided setup"
+					,
+					code_link="https://github.com/santivediap/fullstackapp-microservices-kubernetes"
+				/>
+			</section>
+
+			<section class="section" id="tech-stack">
+				<h2>Tech Stack</h2>
+
+				<StackSection title="Front-end">
+					<li class="glass">
+						<img
+							src="/icons/react.svg"
+							alt="React logo"
+							width="24"
+							height="24"
+							loading="lazy"
+						/>
+
+						<span>React</span>
+					</li>
+
+					<li class="glass">
+						<img
+							src="/icons/html.svg"
+							alt="HTML logo"
+							width="24"
+							height="24"
+							loading="lazy"
+						/>
+
+						<span>HTML</span>
+					</li>
+
+					<li class="glass">
+						<img
+							src="/icons/css.svg"
+							alt="CSS logo"
+							width="24"
+							height="24"
+							loading="lazy"
+						/>
+
+						<span>CSS</span>
+					</li>
+
+					<li class="glass">
+						<img
+							src="/icons/js.svg"
+							alt="JavaScript logo"
+							width="24"
+							height="24"
+							loading="lazy"
+						/>
+
+						<span>JavaScript</span>
+					</li>
+
+					<li class="glass">
+						<img
+							src="/icons/astro.svg"
+							alt="Astro logo"
+							width="24"
+							height="24"
+							loading="lazy"
+						/>
+
+						<span>Astro</span>
+					</li>
+				</StackSection>
+
+				<StackSection title="Back-End / Databases">
+					<li class="glass">
+						<img
+							src="/icons/node.svg"
+							alt="Node logo"
+							width="24"
+							height="24"
+							loading="lazy"
+						/>
+
+						<span> NodeJS </span>
+					</li>
+
+					<li class="glass">
+						<img
+							src="/icons/express.svg"
+							alt="Express logo"
+							width="24"
+							height="24"
+							loading="lazy"
+							class="white-svg"
+						/>
+
+						<span> Express </span>
+					</li>
+
+					<li class="glass">
+						<img
+							src="/icons/postgresql.svg"
+							alt="PostgreSQL logo"
+							width="24"
+							height="24"
+							loading="lazy"
+						/>
+
+						<span> PostgreSQL </span>
+					</li>
+
+					<li class="glass">
+						<img
+							src="/icons/mongo.svg"
+							alt="Mongo logo"
+							width="24"
+							height="24"
+							loading="lazy"
+						/>
+
+						<span> MongoDB </span>
+					</li>
+				</StackSection>
+
+				<StackSection title="Version Control / Automatization">
+					<li class="glass">
+						<img
+							src="/icons/github.svg"
+							alt="Github logo"
+							width="24"
+							height="24"
+							loading="lazy"
+							class="white-svg"
+						/>
+
+						<span> Github </span>
+					</li>
+
+					<li class="glass">
+						<img
+							src="/icons/docker.svg"
+							alt="Docker logo"
+							width="24"
+							height="24"
+							loading="lazy"
+						/>
+
+						<span> Docker </span>
+					</li>
+
+					<li class="glass">
+						<img
+							src="/icons/kubernetes.svg"
+							alt="Kubernetes logo"
+							width="24"
+							height="24"
+							loading="lazy"
+						/>
+
+						<span> Kubernetes </span>
+					</li>
+
+					<li class="glass">
+						<img
+							src="/icons/aws.svg"
+							alt="AWS logo"
+							width="24"
+							height="24"
+							loading="lazy"
+							class="white-svg"
+						/>
+
+						<span> Amazon Web Services </span>
+					</li>
+				</StackSection>
+			</section>
+
+			<section class="section" id="contact">
+				<h2>Get in Touch</h2>
+				<p class="contact-subtitle">
+					Have a project in mind or looking to add an engineer to your
+					team? Let's talk
+				</p>
+
+				<form id="contact-form" class="contact-form">
+					<div class="form-group">
+						<label class="sr-only" for="email">Your Email</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							required
+							autocomplete="email"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only" for="name">Subject</label>
+						<input
+							type="text"
+							id="subject"
+							name="subject"
+							required
+							autocomplete="subject"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label class="sr-only" for="message">Message</label>
+						<textarea id="message" name="message" rows="4" required
+						></textarea>
+					</div>
+
+					<button type="submit" class="btn purple" id="submit-btn">
+						<span class="btn-text">Send Message</span>
+						<span class="btn-loader hidden">Sending...</span>
+					</button>
+
+					<p id="form-status" class="form-status hidden"></p>
+				</form>
+			</section>
+		</main>
+
+		<Footer />
 	</body>
 </html>
+
+<script>
+	const form = document.getElementById("contact-form") as HTMLFormElement;
+	const submitBtn = document.getElementById("submit-btn");
+	const btnText = submitBtn.querySelector(".btn-text");
+	const btnLoader = submitBtn.querySelector(".btn-loader");
+	const statusMessage = document.getElementById("form-status");
+
+	form.addEventListener("submit", async (e) => {
+		e.preventDefault();
+
+		btnText.classList.add("hidden");
+		btnLoader.classList.remove("hidden");
+		submitBtn.setAttribute("disabled", "true");
+		statusMessage.className = "form-status hidden";
+
+		const formData = new FormData(form);
+		const data = Object.fromEntries(formData);
+
+		try {
+			const response = await fetch("/api/send-email", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			});
+
+			if (response.ok) {
+				form.reset();
+				statusMessage.textContent =
+					"Message sent! I'll be in touch shortly";
+				statusMessage.classList.add("success");
+			} else {
+				throw new Error("Error en el servidor");
+			}
+		} catch (error) {
+			statusMessage.textContent =
+				"Something went wrong sending your message. Please try again";
+			statusMessage.classList.add("error");
+		} finally {
+			btnText.classList.remove("hidden");
+			btnLoader.classList.add("hidden");
+			submitBtn.removeAttribute("disabled");
+			statusMessage.classList.remove("hidden");
+		}
+	});
+</script>
