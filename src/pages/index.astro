@@ -121,193 +121,197 @@ import StackSection from "../components/StackSection.astro";
 			<section class="section" id="projects">
 				<h2>Recent Projects</h2>
 
-				<ProjectDisplay
-					image_display={fotoDatotesis}
-					title="Datotesis"
-					description="Tool that gives you data insights in seconds with raw data and a
-            click. Useful for start-ups, students and teachers"
-					,
-					deploy_link="https://datotesis-final.onrender.com/"
-					,
-					code_link="https://github.com/santivediap/Datotesis"
-				/>
+				<div>
+					<ProjectDisplay
+						image_display={fotoDatotesis}
+						title="Datotesis"
+						description="Tool that gives you data insights in seconds with raw data and a
+				click. Useful for start-ups, students and teachers"
+						,
+						deploy_link="https://datotesis-final.onrender.com/"
+						,
+						code_link="https://github.com/santivediap/Datotesis"
+					/>
 
-				<ProjectDisplay
-					image_display={fotoFSKs}
-					title="Fullstack App on Kubernetes"
-					description="Learn the basics of how to deploy a simple Fullstack App in Kubernetes through this guided setup"
-					,
-					code_link="https://github.com/santivediap/fullstackapp-microservices-kubernetes"
-				/>
+					<ProjectDisplay
+						image_display={fotoFSKs}
+						title="Fullstack App on Kubernetes"
+						description="Learn the basics of how to deploy a simple Fullstack App in Kubernetes through this guided setup"
+						,
+						code_link="https://github.com/santivediap/fullstackapp-microservices-kubernetes"
+					/>
+				</div>
 			</section>
 
 			<section class="section" id="tech-stack">
 				<h2>Tech Stack</h2>
 
-				<StackSection title="Front-end">
-					<li class="glass">
-						<img
-							src="/icons/react.svg"
-							alt="React logo"
-							width="24"
-							height="24"
-							loading="lazy"
-						/>
+				<div class="stack-container">
+					<StackSection title="Front-end">
+						<li class="glass">
+							<img
+								src="/icons/react.svg"
+								alt="React logo"
+								width="24"
+								height="24"
+								loading="lazy"
+							/>
 
-						<span>React</span>
-					</li>
+							<span>React</span>
+						</li>
 
-					<li class="glass">
-						<img
-							src="/icons/html.svg"
-							alt="HTML logo"
-							width="24"
-							height="24"
-							loading="lazy"
-						/>
+						<li class="glass">
+							<img
+								src="/icons/html.svg"
+								alt="HTML logo"
+								width="24"
+								height="24"
+								loading="lazy"
+							/>
 
-						<span>HTML</span>
-					</li>
+							<span>HTML</span>
+						</li>
 
-					<li class="glass">
-						<img
-							src="/icons/css.svg"
-							alt="CSS logo"
-							width="24"
-							height="24"
-							loading="lazy"
-						/>
+						<li class="glass">
+							<img
+								src="/icons/css.svg"
+								alt="CSS logo"
+								width="24"
+								height="24"
+								loading="lazy"
+							/>
 
-						<span>CSS</span>
-					</li>
+							<span>CSS</span>
+						</li>
 
-					<li class="glass">
-						<img
-							src="/icons/js.svg"
-							alt="JavaScript logo"
-							width="24"
-							height="24"
-							loading="lazy"
-						/>
+						<li class="glass">
+							<img
+								src="/icons/js.svg"
+								alt="JavaScript logo"
+								width="24"
+								height="24"
+								loading="lazy"
+							/>
 
-						<span>JavaScript</span>
-					</li>
+							<span>JavaScript</span>
+						</li>
 
-					<li class="glass">
-						<img
-							src="/icons/astro.svg"
-							alt="Astro logo"
-							width="24"
-							height="24"
-							loading="lazy"
-						/>
+						<li class="glass">
+							<img
+								src="/icons/astro.svg"
+								alt="Astro logo"
+								width="24"
+								height="24"
+								loading="lazy"
+							/>
 
-						<span>Astro</span>
-					</li>
-				</StackSection>
+							<span>Astro</span>
+						</li>
+					</StackSection>
 
-				<StackSection title="Back-End / Databases">
-					<li class="glass">
-						<img
-							src="/icons/node.svg"
-							alt="Node logo"
-							width="24"
-							height="24"
-							loading="lazy"
-						/>
+					<StackSection title="Back-End / Databases">
+						<li class="glass">
+							<img
+								src="/icons/node.svg"
+								alt="Node logo"
+								width="24"
+								height="24"
+								loading="lazy"
+							/>
 
-						<span> NodeJS </span>
-					</li>
+							<span> NodeJS </span>
+						</li>
 
-					<li class="glass">
-						<img
-							src="/icons/express.svg"
-							alt="Express logo"
-							width="24"
-							height="24"
-							loading="lazy"
-							class="white-svg"
-						/>
+						<li class="glass">
+							<img
+								src="/icons/express.svg"
+								alt="Express logo"
+								width="24"
+								height="24"
+								loading="lazy"
+								class="white-svg"
+							/>
 
-						<span> Express </span>
-					</li>
+							<span> Express </span>
+						</li>
 
-					<li class="glass">
-						<img
-							src="/icons/postgresql.svg"
-							alt="PostgreSQL logo"
-							width="24"
-							height="24"
-							loading="lazy"
-						/>
+						<li class="glass">
+							<img
+								src="/icons/postgresql.svg"
+								alt="PostgreSQL logo"
+								width="24"
+								height="24"
+								loading="lazy"
+							/>
 
-						<span> PostgreSQL </span>
-					</li>
+							<span> PostgreSQL </span>
+						</li>
 
-					<li class="glass">
-						<img
-							src="/icons/mongo.svg"
-							alt="Mongo logo"
-							width="24"
-							height="24"
-							loading="lazy"
-						/>
+						<li class="glass">
+							<img
+								src="/icons/mongo.svg"
+								alt="Mongo logo"
+								width="24"
+								height="24"
+								loading="lazy"
+							/>
 
-						<span> MongoDB </span>
-					</li>
-				</StackSection>
+							<span> MongoDB </span>
+						</li>
+					</StackSection>
 
-				<StackSection title="Version Control / Automatization">
-					<li class="glass">
-						<img
-							src="/icons/github.svg"
-							alt="Github logo"
-							width="24"
-							height="24"
-							loading="lazy"
-							class="white-svg"
-						/>
+					<StackSection title="Version Control / Automatization">
+						<li class="glass">
+							<img
+								src="/icons/github.svg"
+								alt="Github logo"
+								width="24"
+								height="24"
+								loading="lazy"
+								class="white-svg"
+							/>
 
-						<span> Github </span>
-					</li>
+							<span> Github </span>
+						</li>
 
-					<li class="glass">
-						<img
-							src="/icons/docker.svg"
-							alt="Docker logo"
-							width="24"
-							height="24"
-							loading="lazy"
-						/>
+						<li class="glass">
+							<img
+								src="/icons/docker.svg"
+								alt="Docker logo"
+								width="24"
+								height="24"
+								loading="lazy"
+							/>
 
-						<span> Docker </span>
-					</li>
+							<span> Docker </span>
+						</li>
 
-					<li class="glass">
-						<img
-							src="/icons/kubernetes.svg"
-							alt="Kubernetes logo"
-							width="24"
-							height="24"
-							loading="lazy"
-						/>
+						<li class="glass">
+							<img
+								src="/icons/kubernetes.svg"
+								alt="Kubernetes logo"
+								width="24"
+								height="24"
+								loading="lazy"
+							/>
 
-						<span> Kubernetes </span>
-					</li>
+							<span> Kubernetes </span>
+						</li>
 
-					<li class="glass">
-						<img
-							src="/icons/aws.svg"
-							alt="AWS logo"
-							width="24"
-							height="24"
-							loading="lazy"
-							class="white-svg"
-						/>
+						<li class="glass">
+							<img
+								src="/icons/aws.svg"
+								alt="AWS logo"
+								width="24"
+								height="24"
+								loading="lazy"
+								class="white-svg"
+							/>
 
-						<span> Amazon Web Services </span>
-					</li>
-				</StackSection>
+							<span> Amazon Web Services </span>
+						</li>
+					</StackSection>
+				</div>
 			</section>
 
 			<section class="section" id="contact">

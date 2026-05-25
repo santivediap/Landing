@@ -48,7 +48,7 @@ main {
     img {
         border-radius: 100%;
         aspect-ratio: 1/1;
-        width: 50%;
+        width: 200px;
         height: auto;
     }
 
@@ -177,6 +177,7 @@ circle {
             .buttons {
                 width: 100%;
                 display: flex;
+                flex-direction: row;
                 gap: 15px;
 
                 a {
@@ -203,6 +204,12 @@ circle {
     article:hover {
         border-color: rgba(104, 58, 213, 0.6);
     }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
 }
 
 .about-content {
@@ -221,6 +228,12 @@ circle {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    .stack-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 
     h3 {
         color: #8B5CF6;
@@ -261,7 +274,7 @@ circle {
     background: linear-gradient(141deg, rgba(32, 5, 107, .3) 0%, rgba(227, 83, 237, .3) 100%);
     padding: 20px;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     border: 1px solid rgba(139, 92, 246, .3);
     border-radius: 15px;
     align-self: center;
@@ -512,5 +525,229 @@ circle {
         padding: 2.9vw;
         border-radius: 1.9vw;
         font-size: 3.4vw;
+    }
+}
+
+/* =========================================
+   DESKTOP — min-width: 750px
+   Base (tablet): estilos definidos arriba
+   Aquí sobreescribe lo que necesites ampliar
+   ========================================= */
+@media (min-width: 750px) {
+
+    /* --- Layout general --- */
+    header {
+        /* padding: ; */
+    }
+
+    nav {
+        /* gap: ; */
+
+        a {
+            /* font-size: ; */
+        }
+    }
+
+    main {
+        /* max-width: ; */
+        /* margin: 0 auto; */
+        padding: 25px 100px;
+        /* gap: ; */
+    }
+
+    /* --- Hero --- */
+    #hero {
+        /* flex-direction: row; */
+        /* gap: ; */
+
+        img {
+            /* width: ; */
+        }
+
+        .top {
+            /* text-align: left; */
+            /* gap: ; */
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    /* --- Botones --- */
+    .btn {
+        /* padding: ; */
+        font-size: 1.1rem;
+    }
+
+    /* --- Socials --- */
+    #socials {
+        gap: 20px;
+
+        li {
+            width: 30px;
+        }
+    }
+
+    /* --- Secciones generales --- */
+    .section {
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            font-size: 1.9rem;
+            width: 100%;
+            text-align: center;
+            /* margin-bottom: ; */
+        }
+    }
+
+    #about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* --- About --- */
+    .about-content {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        max-width: 900px;
+        /* flex-direction: row; */
+        /* gap: ; */
+
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
+
+    /* --- Projects --- */
+    #projects {
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        /* gap: ; */
+
+        div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        article {
+            max-width: 800px;
+            /* border-radius: ; */
+
+            .display {
+
+                /* height: ; */
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            .info {
+                gap: 25px;
+                padding: 20px;
+
+                h3 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+
+                .buttons {
+                    /* gap: ; */
+
+                    a {
+                        gap: 10px;
+                        width: auto;
+                        /* padding: ; */
+
+                        span {
+                            font-size: 1rem;
+                        }
+
+                        svg {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* --- Tech stack --- */
+    #tech-stack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .stack-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+
+            ul {
+                gap: 20px;
+
+                li {
+                    font-size: 1.3rem;
+
+                    img {
+                        width: 40px;
+                    }
+                }
+            }
+
+            h3 {
+                text-align: center;
+                font-size: 1.5rem;
+                /* margin-bottom: ; */
+            }
+        }
+
+    }
+
+    /* --- Contacto --- */
+    #contact {
+        /* max-width: ; */
+        /* padding: ; */
+        /* border-radius: ; */
+    }
+
+    .contact-subtitle {
+        font-size: 1.2rem;
+        /* margin-bottom: ; */
+    }
+
+    .contact-form {
+        /* gap: ; */
+    }
+
+    .form-group {
+        /* gap: ; */
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        /* padding: ; */
+        font-size: 1.2rem;
+        /* border-radius: ; */
+    }
+
+    .form-status {
+        /* padding: ; */
+        /* font-size: ; */
+        /* border-radius: ; */
     }
 }
