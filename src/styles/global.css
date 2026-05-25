@@ -1,34 +1,61 @@
+/* ==============================================
+   1. SETTINGS — Variables y paleta de colores
+   ============================================== */
+
+:root {
+    --color-bg: #111827;
+    --color-border: #2b354a;
+    --color-purple: #8B5CF6;
+    --color-purple-hover: #683ad5;
+    --color-purple-dark: rgba(32, 5, 107, .3);
+    --color-purple-light: rgba(227, 83, 237, .3);
+    --color-purple-border: rgba(139, 92, 246, .3);
+    --color-text-muted: rgba(255, 255, 255, .7);
+    --color-text-nav: rgba(255, 255, 255, 0.75);
+    --color-glass-border: rgba(255, 255, 255, 0.15);
+    --color-glass-hover: rgba(255, 255, 255, 0.05);
+    --color-success: #10b981;
+    --color-success-bg: rgba(16, 185, 129, 0.1);
+    --color-success-border: rgba(16, 185, 129, 0.2);
+    --color-error: #ef4444;
+    --color-error-bg: rgba(239, 68, 68, 0.1);
+    --color-error-border: rgba(239, 68, 68, 0.2);
+    --font-main: Inter, sans-serif;
+    --radius-sm: 8px;
+    --radius-md: 10px;
+    --radius-lg: 15px;
+    --radius-full: 100%;
+    --radius-pill: 50px;
+    --transition-fast: 0.1s;
+    --transition-base: 0.2s;
+    --transition-slow: 0.15s;
+}
+
+
+/* ==============================================
+   2. GENERIC — Reset y box-sizing
+   ============================================== */
+
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: Inter, sans-serif;
+    font-family: var(--font-main);
     text-decoration: none;
     color: white;
 }
 
+
+/* ==============================================
+   3. ELEMENTS — Etiquetas HTML base
+   ============================================== */
+
 html {
-    background-color: #111827;
+    background-color: var(--color-bg);
 }
 
 header {
     padding: 30px 20px;
-    border-bottom: .1px solid #2b354a;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    gap: 15px;
-
-    a {
-        color: rgba(255, 255, 255, 0.75);
-        transition: color, ease-in, .2s
-    }
-
-    a:hover {
-        color: white
-    }
+    border-bottom: .1px solid var(--color-border);
 }
 
 main {
@@ -38,6 +65,57 @@ main {
     gap: 80px;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 15px;
+
+    a {
+        color: var(--color-text-nav);
+        transition: color, ease-in, .2s;
+    }
+
+    a:hover {
+        color: white;
+    }
+}
+
+rect,
+path,
+circle {
+    color: var(--color-text-muted);
+    transition: color ease-in var(--transition-fast);
+}
+
+
+/* ==============================================
+   4. OBJECTS — Layout y estructura
+   ============================================== */
+
+.section {
+    width: 100%;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    p {
+        color: var(--color-text-muted);
+    }
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* ==============================================
+   5. COMPONENTS — UI visual
+   ============================================== */
+
 #hero {
     width: 100%;
     display: flex;
@@ -46,7 +124,7 @@ main {
     gap: 40px;
 
     img {
-        border-radius: 100%;
+        border-radius: var(--radius-full);
         aspect-ratio: 1/1;
         width: 200px;
         height: auto;
@@ -78,27 +156,27 @@ main {
 
 .btn {
     padding: 15px 30px;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
     font-weight: 600;
     font-size: .9rem;
-    transition: background-color ease-in 0.15s;
+    transition: background-color ease-in var(--transition-slow);
 }
 
 .glass {
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--color-glass-border);
 }
 
 .purple {
-    background-color: #8B5CF6;
+    background-color: var(--color-purple);
     border: none;
 }
 
 .glass:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--color-glass-hover);
 }
 
 .purple:hover {
-    background-color: #683ad5;
+    background-color: var(--color-purple-hover);
 }
 
 #socials {
@@ -122,23 +200,10 @@ main {
     }
 }
 
-rect,
-path,
-circle {
-    color: rgba(255, 255, 255, .7);
-    transition: color ease-in 0.1s;
-}
-
-.section {
-    width: 100%;
-
-    h2 {
-        margin-bottom: 30px;
-    }
-
-    p {
-        color: rgba(255, 255, 255, .7);
-    }
+.white-svg {
+    padding: 4px;
+    border-radius: var(--radius-full);
+    background-color: white;
 }
 
 #projects {
@@ -149,8 +214,8 @@ circle {
     article {
         overflow: hidden;
         border: 1px solid rgba(255, 255, 255, 0.2);
-        transition: all ease-in 0.2s;
-        border-radius: 15px;
+        transition: all ease-in var(--transition-base);
+        border-radius: var(--radius-lg);
         width: 100%;
 
         .display {
@@ -184,10 +249,10 @@ circle {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    border-radius: 50px;
+                    border-radius: var(--radius-pill);
                     width: 80px;
                     padding: 7px 10px;
-                    transition: all ease-in 0.2s;
+                    transition: all ease-in var(--transition-base);
 
                     span {
                         font-size: .8rem;
@@ -212,18 +277,6 @@ circle {
     }
 }
 
-.about-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.white-svg {
-    padding: 4px;
-    border-radius: 100%;
-    background-color: white;
-}
-
 #tech-stack {
     display: flex;
     flex-direction: column;
@@ -236,7 +289,7 @@ circle {
     }
 
     h3 {
-        color: #8B5CF6;
+        color: var(--color-purple);
         margin-bottom: 20px;
     }
 
@@ -253,11 +306,11 @@ circle {
         li {
             display: flex;
             align-items: center;
-            transition: all ease-in 0.2s;
+            transition: all ease-in var(--transition-base);
             justify-content: flex-start;
             width: auto;
             gap: 10px;
-            border-radius: 15px;
+            border-radius: var(--radius-lg);
             padding: 5px 10px;
 
             img {
@@ -268,22 +321,15 @@ circle {
     }
 }
 
-
 #contact {
     background: #20056b;
-    background: linear-gradient(141deg, rgba(32, 5, 107, .3) 0%, rgba(227, 83, 237, .3) 100%);
+    background: linear-gradient(141deg, var(--color-purple-dark) 0%, var(--color-purple-light) 100%);
     padding: 20px;
     width: 100%;
     max-width: 600px;
-    border: 1px solid rgba(139, 92, 246, .3);
-    border-radius: 15px;
+    border: 1px solid var(--color-purple-border);
+    border-radius: var(--radius-lg);
     align-self: center;
-}
-
-.form-group label {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
 }
 
 .contact-subtitle {
@@ -305,49 +351,77 @@ circle {
     gap: 8px;
 }
 
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
 .form-group input,
 .form-group textarea {
     background-color: rgba(0, 0, 0, 0.338);
     border: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     padding: 12px 16px;
     color: white;
     font-family: inherit;
     font-size: 1rem;
-    transition: border-color 0.2s ease, background-color 0.2s ease;
+    transition: border-color var(--transition-base) ease, background-color var(--transition-base) ease;
     resize: vertical;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #8B5CF6;
+    border-color: var(--color-purple);
     background-color: rgba(255, 255, 255, 0.08);
-}
-
-.hidden {
-    display: none !important;
 }
 
 .form-status {
     padding: 12px;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     font-size: 0.9rem;
     text-align: center;
 }
 
 .form-status.success {
-    background-color: rgba(16, 185, 129, 0.1);
-    color: #10b981;
-    border: 1px solid rgba(16, 185, 129, 0.2);
+    background-color: var(--color-success-bg);
+    color: var(--color-success);
+    border: 1px solid var(--color-success-border);
 }
 
 .form-status.error {
-    background-color: rgba(239, 68, 68, 0.1);
-    color: #ef4444;
-    border: 1px solid rgba(239, 68, 68, 0.2);
+    background-color: var(--color-error-bg);
+    color: var(--color-error);
+    border: 1px solid var(--color-error-border);
 }
+
+
+/* ==============================================
+   6. UTILITIES — Clases de una sola función
+   ============================================== */
+
+.hidden {
+    display: none !important;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+/* ==============================================
+   MEDIA — Mobile (< 420px)
+   ============================================== */
 
 @media (max-width: 419px) {
     header {
@@ -528,46 +602,18 @@ circle {
     }
 }
 
-/* =========================================
-   DESKTOP — min-width: 750px
-   Base (tablet): estilos definidos arriba
-   Aquí sobreescribe lo que necesites ampliar
-   ========================================= */
+
+/* ==============================================
+   MEDIA — Desktop (≥ 750px)
+   ============================================== */
+
 @media (min-width: 750px) {
-
-    /* --- Layout general --- */
-    header {
-        /* padding: ; */
-    }
-
-    nav {
-        /* gap: ; */
-
-        a {
-            /* font-size: ; */
-        }
-    }
-
     main {
-        /* max-width: ; */
-        /* margin: 0 auto; */
         padding: 25px 100px;
-        /* gap: ; */
     }
 
-    /* --- Hero --- */
     #hero {
-        /* flex-direction: row; */
-        /* gap: ; */
-
-        img {
-            /* width: ; */
-        }
-
         .top {
-            /* text-align: left; */
-            /* gap: ; */
-
             h1 {
                 font-size: 2.5rem;
             }
@@ -578,13 +624,10 @@ circle {
         }
     }
 
-    /* --- Botones --- */
     .btn {
-        /* padding: ; */
         font-size: 1.1rem;
     }
 
-    /* --- Socials --- */
     #socials {
         gap: 20px;
 
@@ -593,7 +636,6 @@ circle {
         }
     }
 
-    /* --- Secciones generales --- */
     .section {
         align-items: center;
         justify-content: center;
@@ -602,7 +644,6 @@ circle {
             font-size: 1.9rem;
             width: 100%;
             text-align: center;
-            /* margin-bottom: ; */
         }
     }
 
@@ -611,14 +652,11 @@ circle {
         flex-direction: column;
     }
 
-    /* --- About --- */
     .about-content {
         align-items: center;
         justify-content: center;
         display: flex;
         max-width: 900px;
-        /* flex-direction: row; */
-        /* gap: ; */
 
         p {
             font-size: 1.2rem;
@@ -626,11 +664,8 @@ circle {
         }
     }
 
-    /* --- Projects --- */
     #projects {
         flex-direction: column;
-        /* flex-wrap: wrap; */
-        /* gap: ; */
 
         div {
             display: flex;
@@ -639,11 +674,8 @@ circle {
 
         article {
             max-width: 800px;
-            /* border-radius: ; */
 
             .display {
-
-                /* height: ; */
                 img {
                     object-fit: cover;
                 }
@@ -662,12 +694,9 @@ circle {
                 }
 
                 .buttons {
-                    /* gap: ; */
-
                     a {
                         gap: 10px;
                         width: auto;
-                        /* padding: ; */
 
                         span {
                             font-size: 1rem;
@@ -682,7 +711,6 @@ circle {
         }
     }
 
-    /* --- Tech stack --- */
     #tech-stack {
         display: flex;
         flex-direction: column;
@@ -708,30 +736,12 @@ circle {
             h3 {
                 text-align: center;
                 font-size: 1.5rem;
-                /* margin-bottom: ; */
             }
         }
-
-    }
-
-    /* --- Contacto --- */
-    #contact {
-        /* max-width: ; */
-        /* padding: ; */
-        /* border-radius: ; */
     }
 
     .contact-subtitle {
         font-size: 1.2rem;
-        /* margin-bottom: ; */
-    }
-
-    .contact-form {
-        /* gap: ; */
-    }
-
-    .form-group {
-        /* gap: ; */
     }
 
     .form-group label {
@@ -740,14 +750,6 @@ circle {
 
     .form-group input,
     .form-group textarea {
-        /* padding: ; */
         font-size: 1.2rem;
-        /* border-radius: ; */
-    }
-
-    .form-status {
-        /* padding: ; */
-        /* font-size: ; */
-        /* border-radius: ; */
     }
 }
