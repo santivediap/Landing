@@ -25,6 +25,7 @@ import StackSection from "../components/StackSection.astro";
 		<meta name="generator" content={Astro.generator} />
 
 		<title>Santiago Vedia | Software Engineer & Web Developer</title>
+		<link rel="canonical" href="https://santiagovedia.com/" />
 		<meta
 			name="description"
 			content="Santiago Vedia's Portfolio. Specialist in Full-stack development, web performance (Astro/React), and technical SEO."
@@ -59,6 +60,23 @@ import StackSection from "../components/StackSection.astro";
 			property="twitter:image"
 			content="https://santiagovedia.com/og-image.jpg"
 		/>
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Santiago Vedia García",
+				"jobTitle": "Software Engineer & Web Developer",
+				"url": "https://santiagovedia.com/",
+				"image": "https://santiagovedia.com/og-image.jpg",
+				"description": "Full-stack Developer, DevOps Engineer, and SEO Specialist based in Spain.",
+				"sameAs": [
+					"https://github.com/santivediap",
+					"https://x.com/SantiLMAO",
+					"https://www.linkedin.com/in/santivediag/"
+				]
+			}
+		</script>
 	</head>
 	<body>
 		<Header />
