@@ -1,5 +1,5 @@
 {
-	"name": "landing",
+	"name": "landing-production",
 	"compatibility_date": "2026-05-25", // Update to the day you deploy
 	"assets": {
 		"directory": "./dist"
